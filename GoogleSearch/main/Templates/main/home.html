@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block header %}
+...
+{% endblock %}
+
+{% block content %}
+<section class="home">
+    <img class="home-logo" src="{% static 'main/images/googlelogo_color_272x92dp.png' %}" alt="Google">
+
+    <!-- البونص: الفورم يرسل البحث إلى قوقل -->
+    <form action="https://www.google.com/search" method="get">
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" name="q" aria-label="Search" autocomplete="off" required>
+            <span class="material-icons mic">mic</span>
+        </div>
+
+        <div class="search-buttons">
+            <button type="submit">Google Search</button>
+            <button type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
