@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Brave Search{% endblock %}</title>
+    <link rel="icon" type="image/svg+xml" href="{% static 'brave-favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'brave.css' %}">
+</head>
+<body>
+    <main class="{% block main_class %}{% endblock %}">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <span>© Brave Software</span>
+        <a href="{% url 'home' %}">Brave Search</a>
+        <a href="{% url 'terms' %}">Terms of Service</a>
+    </footer>
+</body>
+</html>

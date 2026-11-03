@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Inter;
+    src: url("inter-latin.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: dark;
+    font-family: Inter, Arial, sans-serif;
+    background: #17171f;
+    color: #f5f4f8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px clamp(48px, 17vh, 168px);
+    background: radial-gradient(ellipse at 50% 0%, #30233e 0%, #17171f 65%);
+}
+
+.wordmark { margin: 0 0 30px; }
+.wordmark img, .back img { display: block; }
+
+.search-box {
+    display: flex;
+    width: min(100%, 640px);
+    border: 1px solid #494956;
+    border-radius: 28px;
+    min-height: 56px;
+    box-shadow: 0 8px 28px #0d0d1459;
+    background: #23232d;
+}
+
+.search-box:focus-within {
+    border-color: #a497ff;
+    outline: 1px solid #a497ff;
+}
+
+.search-box input,
+.search-box button {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 18px;
+    text-align: start;
+}
+
+.search-box input:focus { outline: none; }
+.search-box input::placeholder { color: #aaaab6; }
+
+.search-box button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    margin: 5px;
+    padding: 0;
+    border-radius: 50%;
+    background: #a69bff;
+    color: #181426;
+    cursor: pointer;
+}
+
+a { color: #b7aaff; }
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding: 20px;
+    border-top: 1px solid #34343f;
+    color: #aaaab6;
+    font-size: 13px;
+}
+
+footer a { color: inherit; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+.terms {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    padding: 32px 24px 56px;
+}
+
+.search-box button:hover { background: #bdb4ff; }
+
+.terms article {
+    margin-top: 24px;
+    padding: clamp(20px, 5vw, 42px);
+    border: 1px solid #34343f;
+    border-radius: 20px;
+    background: #202029;
+    line-height: 1.65;
+}
+.terms h1 { font-size: clamp(32px, 7vw, 44px); }
+.terms h2 { font-size: 22px; }
+.terms p { color: #c2c1cd; }
+
+.terms-icon {
+    color: #b7aaff;
+}
