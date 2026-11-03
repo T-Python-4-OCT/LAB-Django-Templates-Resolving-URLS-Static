@@ -1,0 +1,28 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block content %}
+  <section class="home">
+    <img src="{% static 'images/google-logo.png' %}" alt="Google" class="logo">
+
+    <form class="search-form" action="https://www.google.com/search" method="get">
+      <div class="search-box">
+        <span class="search-icon material-symbols-outlined" aria-hidden="true">search</span>
+        <input type="text" name="q" aria-label="Search" autocomplete="off" autofocus>
+        <img src="{% static 'images/mircophone.png' %}" alt="" class="box-icon">
+        <img src="{% static 'images/camera.png' %}" alt="" class="box-icon">
+      </div>
+
+      <div class="search-buttons">
+        <button type="submit" class="gbtn">Google Search</button>
+        <button type="button" class="gbtn">I'm Feeling Lucky</button>
+      </div>
+    </form>
+
+    <p class="offered">Google offered in: <span class="lang" lang="ar">العربية</span></p>
+  </section>
+{% endblock %}
+
+<!-- --MohammedAlnsafi-- -->
