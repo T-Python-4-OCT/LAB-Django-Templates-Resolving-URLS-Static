@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google Search{% endblock %}
+
+{% block content %}
+
+<div class="top-links">
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <span class="material-symbols-outlined">apps</span>
+    <button>Sign in</button>
+</div>
+
+<section class="search-container">
+
+    <img src="{% static 'images/google-logo.png' %}" alt="Google Logo">
+
+    <form action="https://www.google.com/search" method="GET">
+
+        <div class="search-box">
+
+            <span class="material-symbols-outlined">search</span>
+
+            <input type="text" name="q">
+
+            
+       <img src="{% static 'images/mic.png' %}"
+     class="search-icon"
+     alt="Microphone">
+
+<img src="{% static 'images/camera.png' %}"
+     class="search-icon"
+     alt="Google Lens">
+
+
+        </div>
+
+        <div class="search-buttons">
+            <button type="submit">Google Search</button>
+            <button type="submit" name="btnI" value="1">
+                I'm Feeling Lucky
+            </button>
+        </div>
+
+    </form>
+
+    <p>Google offered in: <a href="#">العربية</a></p>
+
+</section>
+{% endblock %}
