@@ -1,0 +1,296 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #202124;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+
+.header {
+    height: 64px;
+    flex-shrink: 0;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 0 16px;
+    font-size: 13px;
+}
+
+.apps-icon {
+    font-size: 28px;
+    color: #5f6368;
+    line-height: 1;
+}
+
+.sign-in {
+    background: #1a73e8;
+    color: white;
+    padding: 11px 27px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.sign-in:hover {
+    background: #1765cc;
+    text-decoration: none;
+}
+
+/* Home */
+
+.home-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.search-container {
+    width: 100%;
+    text-align: center;
+    padding: clamp(75px, 18vh, 190px) 20px 40px;
+}
+
+.google-logo {
+    width: 272px;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 584px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: transparent;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+.magnifier {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9aa0a6;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.magnifier::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    background: #9aa0a6;
+    transform: rotate(45deg);
+    top: 12px;
+    left: 10px;
+}
+
+.search-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 29px;
+}
+
+.search-buttons button {
+    background: #f8f9fa;
+    color: #3c4043;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-buttons button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.language {
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+.language a,
+.terms-content a {
+    color: #1a0dab;
+}
+
+/* Footer */
+
+.footer {
+    background: #f2f2f2;
+    color: #202124;
+    font-size: 14px;
+}
+
+.country {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 30px;
+}
+
+.footer-links > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Terms */
+
+.terms-main {
+    flex: 1;
+}
+
+.terms-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 45px 25px 80px;
+}
+
+.terms-image {
+    display: block;
+    width: 100%;
+    max-width: 920px;
+    height: auto;
+    margin: 0 auto 45px;
+}
+
+.terms-content {
+    max-width: 1000px;
+    line-height: 1.5;
+}
+
+.terms-content h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.terms-content h2 {
+    font-size: 21px;
+    margin-top: 22px;
+}
+
+.terms-content p {
+    font-size: 14px;
+}
+
+.terms-meta {
+    font-size: 13px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .navbar {
+        gap: 12px;
+    }
+
+    .sign-in {
+        padding: 10px 14px;
+    }
+
+    .search-container {
+        padding-top: 90px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .terms-container {
+        padding: 25px 20px;
+    }
+
+    .terms-content h1 {
+        font-size: 25px;
+    }
+}
+.apps-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.apps-icon:hover {
+    background-color: #f1f3f4;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 4px);
+    grid-template-rows: repeat(3, 4px);
+    gap: 3px;
+}
+
+.apps-grid i {
+    width: 4px;
+    height: 4px;
+    background-color: #5f6368;
+    border-radius: 50%;
+}
