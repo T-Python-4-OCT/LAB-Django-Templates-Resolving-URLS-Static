@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Google{% endblock %}</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+
+    <header class="top-header">
+        <nav>
+            <a href="#">Gmail</a>
+            <a href="#">Images</a>
+            <i class="fa-solid fa-grip menu-icon" title="Google apps"></i>
+            <button class="sign-in">Sign in</button>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block country %}
+        {% endblock %}
+
+        <div class="footer-links">
+            <div>
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+            </div>
+
+            <div>
+                <a href="#">Privacy</a>
+                <a href="{% url 'GoogleSearch:trems' %}">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
