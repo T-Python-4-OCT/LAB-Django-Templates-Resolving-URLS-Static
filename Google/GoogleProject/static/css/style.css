@@ -1,0 +1,316 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #202124;
+    background-color: #fff;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   GOOGLE HOMEPAGE
+========================= */
+
+.google-header {
+    height: 65px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.google-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.google-header a {
+    color: #202124;
+    font-size: 13px;
+}
+
+
+.google-main {
+    min-height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.google-logo {
+    margin-bottom: 30px;
+}
+
+.google-logo img {
+    width: 270px;
+    max-width: 80vw;
+}
+
+
+.search-box {
+    width: 580px;
+    max-width: 90vw;
+    height: 48px;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 12px;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+
+.search-icon {
+    font-size: 25px;
+    color: #9aa0a6;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    min-width: 0;
+}
+
+.icon-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon-button img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.search-buttons button {
+    background: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    padding: 10px 18px;
+    color: #3c4043;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-buttons button:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   GOOGLE FOOTER
+========================= */
+
+.google-footer {
+    background: #f2f2f2;
+    color: #70757a;
+    font-size: 14px;
+}
+
+.footer-country {
+    padding: 18px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 18px 30px;
+    gap: 20px;
+}
+
+.footer-links div {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #70757a;
+}
+
+
+/* =========================
+   TERMS PAGE
+========================= */
+
+.terms-header {
+    border-bottom: 1px solid #dadce0;
+    padding: 25px 7%;
+}
+
+.terms-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.terms-header h1 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+.terms-container {
+    max-width: 1050px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.terms-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 65px;
+    background: #f8fafd;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.terms-hero p {
+    margin-bottom: 12px;
+    color: #5f6368;
+}
+
+.terms-hero img {
+    width: 240px;
+    max-width: 40%;
+}
+
+
+.terms-content {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.terms-content h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 45px 0 18px;
+    color: #202124;
+}
+
+.terms-content h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 30px 0 15px;
+}
+
+.terms-content p {
+    margin-bottom: 20px;
+    color: #3c4043;
+}
+
+.terms-content ul {
+    padding-left: 35px;
+    margin: 25px 0;
+}
+
+.terms-content li {
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+
+.terms-content a {
+    color: #1a73e8;
+}
+
+.terms-footer {
+    background: #f8f9fa;
+    padding: 30px;
+    text-align: center;
+    color: #70757a;
+    font-size: 13px;
+}
+
+.terms-footer p {
+    margin-top: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 650px) {
+
+    .terms-header {
+        padding: 20px;
+    }
+
+    .terms-header h1 {
+        font-size: 25px;
+    }
+
+    .terms-container {
+        padding: 0 20px;
+        margin: 25px auto;
+    }
+
+    .terms-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .terms-hero img {
+        max-width: 100%;
+        width: 180px;
+        align-self: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .google-main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+}
