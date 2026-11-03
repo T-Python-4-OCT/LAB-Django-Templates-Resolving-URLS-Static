@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Google{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <nav class="header-links" aria-label="Google links">
+            <a href="https://mail.google.com/">Gmail</a>
+            <a href="https://www.google.com/imghp">Images</a>
+            <a class="icon-link" href="https://about.google/products/" aria-label="Google apps">
+                <span class="material-icons" aria-hidden="true">apps</span>
+            </a>
+            <a class="sign-in" href="https://accounts.google.com/">Sign in</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+        <div class="country">Saudi Arabia</div>
+        <div class="footer-links">
+            <nav aria-label="About Google">
+                <a href="https://about.google/">About</a>
+                <a href="https://ads.google.com/">Advertising</a>
+                <a href="https://smallbusiness.withgoogle.com/">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/">How Search works</a>
+            </nav>
+            <nav aria-label="Policies and settings">
+                <a href="https://policies.google.com/privacy">Privacy</a>
+                <a href="{% url 'search:terms' %}">Terms</a>
+                <a href="https://www.google.com/preferences">Settings</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
