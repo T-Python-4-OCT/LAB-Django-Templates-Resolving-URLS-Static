@@ -1,0 +1,12 @@
+from django.shortcuts import render
+from django.http import HttpResponse,HttpRequest
+
+
+def home(request):
+    return render(request, "search/home.html")
+
+
+def terms(request):
+    return render(request, "search/terms.html")
+
+# Create your views here.
