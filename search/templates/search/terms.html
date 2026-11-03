@@ -1,0 +1,40 @@
+{% extends 'search/base.html' %}
+{% load static %}
+{% block title %}Google Terms of Service{% endblock %}
+{% block body_class %}terms-page{% endblock %}
+{% block content %}
+<header class="topbar">
+  <nav class="top-links" aria-label="Google links">
+    <a href="https://mail.google.com/">Gmail</a>
+    <a href="https://images.google.com/">Images</a>
+    <a class="apps-button" href="https://www.google.com/intl/en/about/products" aria-label="Google apps"><span class="material-icons-round">apps</span></a>
+    <a class="sign-in" href="https://accounts.google.com/">Sign in</a>
+  </nav>
+</header>
+<main class="terms-document">
+  <img class="terms-illustration" src="{% static 'search/images/tos_main_illustration.svg' %}" alt="Illustration of a terms document and privacy protections">
+  <article class="terms-copy">
+    <h1>Google Terms of Service</h1>
+    <p class="effective-date">Effective 5 January 2022 <span aria-hidden="true">|</span> <a href="https://www.google.com/terms/archive?hl=en-SA&amp;fg=1">Archived versions</a> <span aria-hidden="true">|</span> <a href="https://www.gstatic.com/policies/terms/pdf/20220105/it7r24p9/google_terms_of_service_en-GB.pdf">Download PDF</a></p>
+    <p><a href="https://www.google.com/terms?hl=en-SA&amp;fg=1#footnote-country-version">Country version:</a> Saudi Arabia</p>
+    <h2>What's covered in these terms</h2>
+    <p>We know it’s tempting to skip these Terms of Service, but it’s important to establish what you can expect from us as you use Google services, and what we expect from you.</p>
+    <p>These Terms of Service reflect the way Google’s business works, the laws that apply to our company, and certain things that we’ve always believed to be true. As a result, these Terms of Service help define Google’s relationship with you as you interact with our services.</p>
+    <h2>Your relationship with Google</h2>
+    <p>These terms help define the relationship between you and Google. They describe what you can expect from us as you use our services, and what we expect from you.</p>
+    <p>Understanding these terms is important because, by using our services, you’re agreeing to them.</p>
+    <h2>What you can expect from us</h2>
+    <p>We provide a broad range of useful services that are subject to these terms, including search, maps, and other products that help you discover and organize information.</p>
+    <h2>What we expect from you</h2>
+    <p>Our services are designed to work together, making it easier for you to move from one activity to the next. When you use our services, we expect you to respect these terms and the rights of others.</p>
+    <p>For the complete terms, visit <a href="https://policies.google.com/terms?hl=en">Google’s Terms of Service</a>.</p>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="country">Saudi Arabia</div>
+  <nav class="footer-links" aria-label="Footer">
+    <div class="footer-group"><a href="https://about.google/">About</a><a href="https://ads.google.com/">Advertising</a><a href="https://www.google.com/services/">Business</a><a href="https://www.google.com/search/howsearchworks/">How Search works</a></div>
+    <div class="footer-group footer-right"><a href="https://policies.google.com/privacy">Privacy</a><a href="{% url 'terms' %}">Terms</a><a href="https://www.google.com/preferences">Settings</a></div>
+  </nav>
+</footer>
+{% endblock %}
