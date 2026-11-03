@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Search{% endblock %}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+  <header class="top">
+    <a>Gmail</a>
+    <a>Images</a>
+    <span class="material-symbols-outlined apps">apps</span>
+    <a class="signin">Sign in</a>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="foot">
+    <div class="country">Saudi Arabia</div>
+    <div class="links">
+      <div>
+        <a>About</a>
+        <a>Advertising</a>
+        <a>Business</a>
+        <a>How Search works</a>
+      </div>
+      <div>
+        <a>Privacy</a>
+        <a href="{% url 'terms' %}">Terms</a>
+        <a>Settings</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
