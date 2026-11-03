@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Google
+{% endblock %}
+
+{% block content %}
+
+<header class="google-header">
+
+    <nav>
+        <a href="https://mail.google.com/">Gmail</a>
+        <a href="https://images.google.com/">Images</a>
+    </nav>
+
+</header>
+
+
+<main class="google-main">
+
+    <div class="google-logo">
+        <img src="{% static 'images/google-logo.png' %}"
+             alt="Google Logo">
+    </div>
+
+    <form action="https://www.google.com/search" method="GET">
+
+        <div class="search-box">
+
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                name="q"
+                placeholder="Search Google or type a URL"
+                autocomplete="off"
+            >
+
+            <button type="button" class="icon-button">
+                <img src="{% static 'images/mircophone.png' %}"
+                     alt="Voice Search">
+            </button>
+
+            <button type="button" class="icon-button">
+                <img src="{% static 'images/camera.png' %}"
+                     alt="Google Lens">
+            </button>
+
+        </div>
+
+        <div class="search-buttons">
+
+            <button type="submit">
+                Google Search
+            </button>
+
+            <button type="button"
+                    onclick="window.location.href='https://www.google.com/doodles'">
+                I'm Feeling Lucky
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
+
+
+<footer class="google-footer">
+
+    <div class="footer-country">
+        Saudi Arabia
+    </div>
+
+    <div class="footer-links">
+
+        <div>
+            <a href="https://about.google/">About</a>
+            <a href="https://ads.google.com/">Advertising</a>
+            <a href="https://www.google.com/business/">Business</a>
+        </div>
+
+        <div>
+            <a href="{% url 'TermsPage' %}">Terms of Service</a>
+            <a href="https://policies.google.com/privacy">Privacy</a>
+            <a href="https://www.google.com/">Settings</a>
+        </div>
+
+    </div>
+
+</footer>
+
+{% endblock %}
