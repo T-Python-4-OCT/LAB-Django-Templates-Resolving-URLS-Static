@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Google{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header class="top-bar">
+    <a href="https://mail.google.com">Gmail</a>
+    <a href="https://www.google.com/imghp">Images</a>
+    <span class="material-symbols-outlined apps-icon">apps</span>
+    <a href="#" class="sign-in">Sign in</a>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
