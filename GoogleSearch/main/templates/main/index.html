@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+{% load static %}
+
+
+<section class="section" id="mid-section">
+    <img class="logo" src="/static/images/google-logo.png" />
+    <form class="search-form" action="https://www.google.com/search" method="get">
+        <div class="top-content">
+            <div class="search-box">
+                <span class="material-symbols-outlined icon-search">search</span>
+                <input type="text" aria-label="Search"  name="q" autocomplete="off" autofocus>
+                <div class="search-icons">
+                    <img src="{% static 'images/mircophone.png' %}" alt="Search by voice">
+                    <img src="{% static 'images/camera.png' %}" alt="Search by image">
+                </div>
+            </div>
+
+            <div class="search-btn">
+                <a href="#" class="btn light">Google Search</a>
+                <a href="#" class="btn light">I'm Feeling Lucky</a>
+            </div>
+
+            <p class="offered">Google offered in: <a href="#">العربية</a></p>
+        </div>
+    </form>
+</section>
+
+<section class="footor-section">
+     <footer>
+            <div class="footer-country">Saudi Arabia</div>
+            <div class="footer-links">
+                <div class="footer-left">
+                    <a href="#">About</a>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search works</a>
+                </div>
+                <div class="footer-right">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+        </footer>
+</section>
+{% endblock %}
