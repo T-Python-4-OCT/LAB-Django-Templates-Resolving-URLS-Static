@@ -1,0 +1,61 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Google{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="https://mail.google.com/">Gmail</a>
+            <a href="https://images.google.com/">Images</a>
+
+            <a href="https://about.google/products/" class="apps-icon"
+               aria-label="Google Apps">
+               <span class="apps-grid">
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+                </span>
+            </a>
+
+            <a href="https://accounts.google.com/"
+               class="sign-in">Sign in</a>
+        </nav>
+    </header>
+
+    <main class="{% block main_class %}{% endblock %}">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer class="footer">
+        <div class="country">Saudi Arabia</div>
+
+        <div class="footer-links">
+            <div>
+                <a href="https://about.google/">About</a>
+                <a href="https://ads.google.com/">Advertising</a>
+                <a href="https://www.google.com/services/">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/">
+                    How Search works
+                </a>
+            </div>
+
+            <div>
+                <a href="https://policies.google.com/privacy">Privacy</a>
+                <a href="{% url 'search:terms' %}">Terms</a>
+                <a href="https://www.google.com/preferences">Settings</a>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+</body>
+</html>

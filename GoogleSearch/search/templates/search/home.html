@@ -1,0 +1,60 @@
+
+{% extends "search/base.html" %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block main_class %}home-main{% endblock %}
+
+{% block content %}
+
+<section class="search-container">
+
+    <img
+        src="{% static 'search/images/google-logo.png' %}"
+        alt="Google"
+        class="google-logo"
+    >
+
+    <form action="https://www.google.com/search" method="GET">
+
+        <div class="search-box">
+
+            <span class="magnifier" aria-hidden="true"></span>
+
+            <input type="text" name="q"
+                   aria-label="Search"
+                   autocomplete="off" required>
+
+            <img
+                src="{% static 'search/images/microphone.png' %}"
+                alt="Microphone"
+                class="search-icon"
+            >
+
+            <img
+                src="{% static 'search/images/camera.png' %}"
+                alt="Google Lens"
+                class="search-icon"
+            >
+
+        </div>
+
+        <div class="search-buttons">
+            <button type="submit">Google Search</button>
+
+            <button type="submit" name="btnI" value="1">
+                I'm Feeling Lucky
+            </button>
+        </div>
+
+    </form>
+
+    <p class="language">
+        Google offered in:
+        <a href="https://www.google.com/?hl=ar">العربية</a>
+    </p>
+
+</section>
+
+{% endblock %}
