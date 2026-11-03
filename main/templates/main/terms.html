@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Google Terms of Service{% endblock %}
+
+{% block content %}
+<main class="terms">
+
+  <img class="hero" src="{% static 'main/img/tos_main_illustration.svg' %}" alt="Terms of Service illustration">
+
+  <article>
+    <h1>Google Terms of Service</h1>
+    <p>Effective 5 January 2022 |
+       <a>Archived versions</a> |
+       <a>Download PDF</a></p>
+    <p><a>Country version:</a> Saudi Arabia</p>
+
+    <h2>What's covered in these terms</h2>
+    <p class="bold">We know it's tempting to skip these Terms of Service, but it's important to establish what you can expect from us as you use Google <a>services</a>, and what we expect from you.</p>
+    <p>These Terms of Service reflect <a>the way that Google's business works</a>, the laws that apply to our company, and <a>certain things that we've always believed to be true</a>. As a result, these Terms of Service help define Google's relationship with you as you interact with our services. For example, these terms include the following topic headings:</p>
+
+    <p><a class="back" href="{% url 'home' %}">← Back to search</a></p>
+  </article>
+</main>
+{% endblock %}
