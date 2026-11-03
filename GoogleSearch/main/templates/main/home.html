@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="center">
+  <a href="{% url 'main:home' %}">
+    <img src="{% static 'main/images/google-logo.png' %}" alt="Google" class="logo">
+  </a>
+
+  <form action="https://www.google.com/search" method="get">
+    <div class="searchbox">
+      <span class="material-icons">search</span>
+      <input type="text" name="q" autocomplete="off" placeholder="Search Google or type a URL">
+      <img src="{% static 'main/images/mircophone.png' %}" alt="Voice search" class="icon">
+      <img src="{% static 'main/images/camera.png' %}" alt="Search by image" class="icon">
+    </div>
+    <div class="buttons">
+      <button type="submit">Google Search</button>
+      <button type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+    </div>
+  </form>
+
+  <p class="offered">Google offered in: <a href="#">العربية</a></p>
+</main>
+{% endblock %}
+
+{% block footer %}
+<footer>
+  <div class="country">Saudi Arabia</div>
+  <div class="links">
+    <div>
+      <a href="#">About</a>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+      <a href="#">How Search works</a>
+    </div>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="{% url 'main:terms' %}">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </div>
+</footer>
+{% endblock %}

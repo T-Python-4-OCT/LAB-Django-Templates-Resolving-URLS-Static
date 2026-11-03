@@ -1,0 +1,183 @@
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #202124;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: #1a0dab; text-decoration: none; }
+
+
+
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+}
+
+header .link {
+  color: #202124;
+  font-size: 14px;
+  cursor: default;
+}
+
+
+.signin {
+  background: #1a73e8;
+  color: #fff;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: default;
+}
+.apps {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+/* Home */
+.center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+}
+
+.logo {
+  width: 272px;
+  margin-bottom: 28px;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 580px;
+  max-width: 90vw;
+  padding: 10px 15px;
+  border: 1px solid #dfe1e5;
+  border-radius: 25px;
+  color: #9aa0a6;
+}
+
+.searchbox:hover,
+.searchbox:focus-within {
+  box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  border-color: transparent;
+}
+.searchbox input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.searchbox .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+.buttons button {
+  background: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 0 6px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #3c4043;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  border-color: #dadce0;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.offered {
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+
+/* Footer */
+footer {
+  background: #f2f2f2;
+  font-size: 14px;
+}
+
+.country {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  color: #3c4043;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.links a {
+  color: #3c4043;
+  display: inline-block;
+  padding: 15px 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Terms */
+.banner {
+  display: block;
+  margin: 40px auto;
+  max-width: 900px;
+  width: 90%;
+}
+
+.terms {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto 60px;
+  line-height: 1.5;
+}
+.terms h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.terms h2 {
+  font-size: 25px;
+}
+.terms .lead {
+  font-weight: 700;
+  font-size: 20px;
+}
