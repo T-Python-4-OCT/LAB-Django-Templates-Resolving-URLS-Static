@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Google
+{% endblock %}
+
+{% block content %}
+
+<h1 class="logo">
+    <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+</h1>
+
+<form action="https://www.google.com/search" method="GET">
+
+    <div class="search-box">
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Search HTML and CSS..."
+            required
+        >
+
+        <span class="mic">🎙</span>
+    </div>
+
+    <div class="buttons">
+        <button type="submit">Google Search</button>
+
+        <button type="submit" name="btnI" value="1">
+            I'm Feeling Lucky
+        </button>
+    </div>
+
+</form>
+
+
+{% endblock %}
+
+{% block country %}
+<div class="country">Saudi Arabia</div>
+{% endblock %}
