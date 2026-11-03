@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Google{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <span class="material-icons">apps</span>
+    <button class="signin">Sign in</button>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer>
+    <div class="country">Saudi Arabia</div>
+    <div class="links">
+      <div>
+        <a href="#">About</a>
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How Search works</a>
+      </div>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="{% url 'main:terms' %}">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
