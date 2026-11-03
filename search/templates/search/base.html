@@ -1,0 +1,43 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Google{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'search/css/style.css' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+    {% block header %}{% endblock %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-country">Saudi Arabia</div>
+
+        <div class="footer-links">
+            <div class="footer-group">
+                <a href="https://about.google/" target="_blank" rel="noopener noreferrer">About</a>
+                <a href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">Advertising</a>
+                <a href="https://www.google.com/services/" target="_blank" rel="noopener noreferrer">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/" target="_blank" rel="noopener noreferrer">How Search works</a>
+            </div>
+
+            <div class="footer-group">
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
+                <a href="{% url 'search:terms' %}">Terms</a>
+                <a href="https://www.google.com/preferences" target="_blank" rel="noopener noreferrer">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

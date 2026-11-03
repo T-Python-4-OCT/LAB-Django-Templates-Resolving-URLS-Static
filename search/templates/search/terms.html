@@ -1,0 +1,110 @@
+
+{% extends "search/base.html" %}
+{% load static %}
+
+{% block title %}Google Terms of Service{% endblock %}
+{% block body_class %}terms-page{% endblock %}
+
+{% block header %}
+<header class="terms-header">
+    <a href="{% url 'search:home' %}" class="terms-brand">
+        <img src="{% static 'search/images/google-logo.png' %}" alt="Google">
+    </a>
+
+    <nav class="terms-navigation">
+        <a href="{% url 'search:home' %}">Home</a>
+        <a href="{% url 'search:terms' %}" class="active">Terms of Service</a>
+        <a href="https://policies.google.com/privacy">Privacy Policy</a>
+    </nav>
+
+    <a href="https://accounts.google.com/" class="sign-in">Sign in</a>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="terms-hero">
+    <img
+        src="{% static 'search/images/tos_main_illustration.svg' %}"
+        alt="Terms of Service illustration"
+        class="terms-illustration"
+    >
+
+    <h1>Google Terms of Service</h1>
+
+    <p class="terms-date">
+        Effective 5 January 2022
+        <span>|</span>
+        <a href="https://www.google.com/terms/archive">Archived versions</a>
+        <span>|</span>
+        <a href="https://www.gstatic.com/policies/terms/pdf/20220105/it7r24p9/google_terms_of_service_en-GB.pdf">Download PDF</a>
+    </p>
+
+    <p class="country-version">
+        <a href="https://policies.google.com/terms">Country version:</a>
+        Saudi Arabia
+    </p>
+</section>
+
+<div class="terms-layout">
+    <aside class="terms-sidebar">
+        <p>On this page</p>
+        <a href="#covered">What's covered</a>
+        <a href="#terms">Terms</a>
+        <a href="#provider">Service provider</a>
+        <a href="#age">Age requirements</a>
+    </aside>
+
+    <article class="terms-content">
+        <section id="covered">
+            <h2>What's covered in these terms</h2>
+
+            <p>
+                These terms explain the relationship between Google
+                and the people who use its services.
+                They describe the responsibilities and expectations
+                involved when accessing Google products.
+            </p>
+
+            <p>
+                The terms cover how Google provides its services,
+                the responsibilities of users, ownership of content,
+                and the handling of problems or disagreements.
+            </p>
+
+            <ul>
+                <li><a href="#terms">What you can expect from Google</a></li>
+                <li><a href="#terms">What Google expects from users</a></li>
+                <li><a href="#terms">Content in Google services</a></li>
+                <li><a href="#terms">Problems and disagreements</a></li>
+            </ul>
+
+            <p>
+                Google also provides a
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>
+                explaining how user information is managed.
+            </p>
+        </section>
+
+        <section id="terms">
+            <h2>Terms</h2>
+        </section>
+
+        <section id="provider">
+            <h3>Service provider</h3>
+            <p>
+                Google LLC provides Google services.
+                The company is based in Mountain View, California, USA.
+            </p>
+        </section>
+
+        <section id="age">
+            <h3>Age requirements</h3>
+            <p>
+                Users who are below the required age for managing
+                a Google Account need permission from a parent
+                or legal guardian.
+            </p>
+        </section>
+    </article>
+</div>
+{% endblock %}

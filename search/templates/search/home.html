@@ -1,0 +1,56 @@
+
+{% extends "search/base.html" %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+{% block body_class %}home-page{% endblock %}
+
+{% block header %}
+<header class="home-header">
+    <nav class="top-navigation">
+        <a href="https://mail.google.com/">Gmail</a>
+        <a href="https://images.google.com/">Images</a>
+        <a href="https://about.google/products/" aria-label="Google apps">
+            <span class="material-symbols-outlined">apps</span>
+        </a>
+        <a href="https://accounts.google.com/" class="sign-in">Sign in</a>
+    </nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<section class="search-container">
+    <img
+        src="{% static 'search/images/google-logo.png' %}"
+        alt="Google"
+        class="google-logo"
+    >
+
+    <form action="https://www.google.com/search" method="get" class="search-form">
+        <div class="search-box">
+            <span class="material-symbols-outlined search-icon">search</span>
+
+            <input
+                type="text"
+                name="q"
+                aria-label="Search Google"
+                autocomplete="off"
+                required
+            >
+
+            <img src="{% static 'search/images/mircophone.png' %}" alt="Microphone" class="search-image">
+            <img src="{% static 'search/images/camera.png' %}" alt="Camera" class="search-image">
+        </div>
+
+        <div class="search-buttons">
+            <button type="submit">Google Search</button>
+            <button type="submit" formaction="https://www.google.com/search" name="btnI" value="1" formnovalidate>I'm Feeling Lucky</button>
+        </div>
+    </form>
+
+    <p class="search-language">
+        Google offered in:
+        <a href="https://www.google.com/?hl=ar">العربية</a>
+    </p>
+</section>
+{% endblock %}
