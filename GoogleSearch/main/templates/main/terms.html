@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Terms of Service - Google{% endblock %}
+
+{% block top_left %}
+<a href="{% url 'main:home' %}" class="back-btn" aria-label="Back to home">
+    <span class="material-symbols-outlined">arrow_back</span>
+    <span>Back to search</span>
+</a>
+{% endblock %}
+
+{% block content %}
+<section class="terms">
+    <img class="terms-illustration" src="{% static 'images/tos_main_illustration.svg' %}" alt="Terms of service illustration">
+
+    <h1>Google Terms of Service</h1>
+    <p class="terms-meta">
+        Effective 5 January 2022 |
+        <a href="#">Archived versions</a> |
+        <a href="#">Download PDF</a>
+    </p>
+    <p class="terms-meta">Country version: Saudi Arabia</p>
+
+    <h2 class="section-title">What's covered in these terms</h2>
+    <p class="terms-intro"><strong>We know it's tempting to skip these Terms of Service, but it's important to establish what you can expect from us as you use Google services, and what we expect from you.</strong></p>
+    <p>These terms reflect how our business works and the laws that apply to our company. They describe our relationship with you whenever you interact with our services.</p>
+
+    <h2>Using our services</h2>
+    <p>You must follow the policies that apply to the services you use. You may not misuse our services, interfere with how they work, or try to access them in ways that are not permitted.</p>
+
+    <h2>Your content</h2>
+    <p>Some of our services let you submit content. You keep ownership of what you create, and you give us a limited license to host and display it so the service can work as intended.</p>
+
+    <h2>Privacy</h2>
+    <p>Our Privacy Policy explains how we collect and use information when you use our services. Please read it to understand your choices.</p>
+
+    <h2>Changes to these terms</h2>
+    <p>We may update these terms from time to time. If changes are significant, we will give you reasonable notice before they take effect.</p>
+
+    <h2>Termination</h2>
+    <p>You can stop using our services at any time. We may suspend or end access to services that violate these terms or the law.</p>
+</section>
+{% endblock %}
