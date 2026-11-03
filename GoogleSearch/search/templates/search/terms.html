@@ -1,0 +1,40 @@
+{% extends "search/base.html" %}
+{% load static %}
+
+{% block title %}Google Terms of Service{% endblock %}
+
+{% block content %}
+<section class="terms">
+    <img class="terms-hero" src="{% static 'search/images/tos_main_illustration.svg' %}" alt="Terms of Service illustration">
+
+    <article class="terms-text">
+        <h1>Google Terms of Service</h1>
+        <p class="meta">
+            Effective 5 January 2022 |
+            <a href="https://policies.google.com/terms/archive">Archived versions</a> |
+            <a href="https://policies.google.com/terms/file">Download PDF</a>
+        </p>
+        <p class="meta">
+            <a href="https://policies.google.com/terms/location">Country version</a>: Saudi Arabia
+        </p>
+
+        <h2>What's covered in these terms</h2>
+
+        <p class="lead">
+            We know it's tempting to skip these Terms of Service, but it's important to
+            establish what you can expect from us as you use Google
+            <a href="https://policies.google.com/terms#footnote-services">services</a>,
+            and what we expect from you.
+        </p>
+
+        <p>
+            These Terms of Service reflect
+            <a href="https://about.google/how-our-business-works/">the way that Google's business works</a>,
+            the laws that apply to our company, and
+            <a href="https://about.google/philosophy/">certain things that we've always believed to be true</a>.
+            As a result, these Terms of Service help define Google's relationship with you as you interact
+            with our services.
+        </p>
+    </article>
+</section>
+{% endblock %}
