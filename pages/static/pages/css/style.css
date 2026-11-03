@@ -1,0 +1,562 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #202124;
+    --muted-text-color: #5f6368;
+    --border-color: #dadce0;
+    --surface-color: #f8f9fa;
+    --footer-color: #f2f2f2;
+    --link-color: #1a0dab;
+    --accent-color: #1a73e8;
+    --accent-hover-color: #1765cc;
+}
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+/* Header */
+
+header {
+    padding: 20px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+
+main {
+    flex: 1;
+}
+
+/* Google Homepage */
+
+.search-container {
+    width: 100%;
+    max-width: 700px;
+    margin: clamp(95px, 20vh, 195px) auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.google-logo {
+    display: block;
+    width: 272px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+}
+
+/* Search Bar */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 584px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
+}
+
+.search-icon {
+    color: #9aa0a6;
+    font-size: 22px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-box input:focus-visible {
+    outline: none;
+}
+
+.search-box input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.search-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Search Button */
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.search-buttons button {
+    background-color: var(--surface-color);
+    color: #3c4043;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-buttons button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Terms Page */
+
+.terms-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 24px;
+    line-height: 1.7;
+}
+
+.terms-container h1 {
+    margin-bottom: 24px;
+}
+
+.terms-container h2 {
+    margin: 30px 0 10px;
+}
+
+/* Footer */
+
+footer {
+    background: var(--footer-color);
+    padding: 18px 30px;
+    color: #70757a;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 16px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .search-container {
+        margin-top: 100px;
+        padding: 0 16px;
+    }
+
+    .google-logo {
+        width: 200px;
+    }
+
+    .search-box {
+        gap: 8px;
+    }
+
+    .search-image {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        padding: 16px;
+    }
+}
+
+/* ===================================
+   Google Terms of Service Page
+=================================== */
+
+/* Navigation */
+
+.terms-header {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.terms-top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.terms-top-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.terms-top-nav a:hover {
+    text-decoration: underline;
+}
+
+.terms-top-nav .apps-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-text-color);
+}
+
+.apps-link .material-symbols-outlined {
+    font-size: 28px;
+}
+
+.terms-top-nav .terms-signin {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 27px;
+    border-radius: 5px;
+}
+
+.terms-top-nav .terms-signin:hover {
+    background-color: var(--accent-hover-color);
+    text-decoration: none;
+}
+
+/* Page layout */
+
+.terms-page {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+/* Illustration */
+
+.terms-hero {
+    width: 100%;
+    max-width: 950px;
+    margin: 42px auto 45px;
+    padding: 0 15px;
+}
+
+.terms-illustration {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Terms text */
+
+.terms-article {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.terms-article h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.terms-article h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 34px 0 20px;
+}
+
+.terms-article h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 28px 0 14px;
+}
+
+.terms-article p {
+    margin-bottom: 20px;
+}
+
+.terms-article a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.terms-article a:hover {
+    text-decoration: underline;
+}
+
+.terms-article .terms-meta {
+    margin-bottom: 13px;
+}
+
+.terms-article .country-version {
+    margin-bottom: 28px;
+}
+
+.terms-article .terms-introduction {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.terms-list {
+    padding-left: 32px;
+    margin-bottom: 24px;
+}
+
+.terms-list li {
+    margin-bottom: 12px;
+}
+
+.terms-article .terms-section-title {
+    font-size: 32px;
+    margin-top: 45px;
+}
+
+.terms-article address {
+    font-style: normal;
+    margin-bottom: 24px;
+}
+
+/* Responsive Terms Page */
+
+@media (max-width: 768px) {
+
+    .terms-header {
+        padding: 12px 16px;
+    }
+
+    .terms-top-nav {
+        gap: 14px;
+    }
+
+    .terms-top-nav .terms-signin {
+        padding: 10px 16px;
+    }
+
+    .terms-hero {
+        margin: 25px auto 35px;
+        padding: 0 12px;
+    }
+
+    .terms-article {
+        padding: 0 20px;
+        font-size: 15px;
+    }
+
+    .terms-article h1 {
+        font-size: 28px;
+    }
+
+    .terms-article h2 {
+        font-size: 22px;
+    }
+
+    .terms-article .terms-introduction {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .terms-top-nav {
+        gap: 10px;
+    }
+
+    .terms-top-nav a {
+        font-size: 12px;
+    }
+
+    .terms-article h1 {
+        font-size: 25px;
+    }
+
+    .terms-article {
+        padding: 0 16px;
+    }
+}
+
+/* ===================================
+   Final Google Homepage
+=================================== */
+
+.home-header {
+    padding: 10px 30px;
+}
+
+.home-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.home-nav a:hover {
+    text-decoration: underline;
+}
+
+.home-nav .apps-link {
+    display: flex;
+    align-items: center;
+    color: var(--muted-text-color);
+}
+
+.home-nav .signin-button {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 11px 26px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.home-nav .signin-button:hover {
+    background: var(--accent-hover-color);
+    text-decoration: none;
+}
+
+.language {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.language a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.language a:hover {
+    text-decoration: underline;
+}
+
+/* Homepage footer */
+
+.home-footer {
+    padding: 0;
+    background: var(--footer-color);
+    color: var(--text-color);
+}
+
+.footer-country {
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 15px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive homepage */
+
+@media (max-width: 768px) {
+    .search-container {
+        margin-top: 110px;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-header {
+        padding: 12px;
+    }
+
+    .home-nav {
+        gap: 12px;
+    }
+
+    .home-nav .signin-button {
+        padding: 9px 14px;
+    }
+
+    .search-container {
+        margin-top: 85px;
+    }
+
+    .footer-country {
+        padding: 14px 18px;
+    }
+
+    .footer-bottom {
+        padding: 15px;
+    }
+}
