@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Google{% endblock %}</title>
+
+    <!-- Google Fonts and Google Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Outfit:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    <!-- Static file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="topbar">
+        <nav aria-label="Top links">
+            <a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a>
+            <a href="https://www.google.com/imghp" target="_blank" rel="noopener">Images</a>
+            <button class="icon-btn" type="button" aria-label="Google apps">
+                <span class="material-symbols-outlined" aria-hidden="true">apps</span>
+            </button>
+            <a class="signin" href="https://accounts.google.com" target="_blank" rel="noopener">Sign in</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p class="country">Your Country</p>
+        <div class="footer-links">
+            <nav aria-label="About links">
+                <a href="https://about.google/" target="_blank" rel="noopener">About</a>
+                <a href="https://ads.google.com/" target="_blank" rel="noopener">Advertising</a>
+                <a href="https://www.google.com/services/" target="_blank" rel="noopener">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/" target="_blank" rel="noopener">How Search works</a>
+            </nav>
+            <nav aria-label="Legal links">
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a>
+                <!-- Dynamic URL -->
+                <a href="{% url 'main:terms_view' %}">Terms</a>
+                <a href="#">Settings</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
