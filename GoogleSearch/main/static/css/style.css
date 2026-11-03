@@ -1,0 +1,177 @@
+/* ===== Variables ===== */
+:root {
+  --blue: #4285f4;
+  --red: #ea4335;
+  --yellow: #fbbc05;
+  --green: #34a853;
+  --text: #202124;
+  --muted: #70757a;
+  --line: #dfe1e5;
+  --soft: #f8f9fa;
+  --footer: #f2f2f2;
+}
+
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font: inherit; cursor: pointer; }
+
+.material-symbols-outlined { font-size: 1.4rem; color: var(--muted); }
+
+/* ===== Top bar ===== */
+.topbar { padding: 14px 20px; }
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: .9rem;
+}
+
+.signin {
+  padding: 9px 22px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--blue);
+  border-radius: 4px;
+}
+.signin:hover { text-decoration: none; background: #1a73e8; }
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+}
+.icon-btn:hover { background: #f1f3f4; }
+
+/* ===== Main (home page) ===== */
+main { flex: 1; }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7vh 20px 0;
+}
+
+.logo {
+  margin-bottom: 28px;
+  font-family: "Outfit", "Roboto", sans-serif;
+  font-size: clamp(3.5rem, 12vw, 5.6rem);
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.logo .b { color: var(--blue); }
+.logo .r { color: var(--red); }
+.logo .y { color: var(--yellow); }
+.logo .g { color: var(--green); }
+
+.search-form { width: min(100%, 584px); }
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 0 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  transition: box-shadow .2s ease;
+}
+.search-box:hover,
+.search-box:focus-within { border-color: transparent; box-shadow: 0 1px 6px rgba(32, 33, 36, .28); }
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.actions { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+
+.btn {
+  padding: 10px 16px;
+  font-size: .9rem;
+  color: #3c4043;
+  background: var(--soft);
+  border: 1px solid var(--soft);
+  border-radius: 4px;
+}
+.btn:hover { border-color: var(--line); box-shadow: 0 1px 1px rgba(0, 0, 0, .1); }
+
+.offered { margin-top: 28px; font-size: .85rem; color: var(--muted); }
+.offered a { color: #1a0dab; }
+
+/* ===== Terms page ===== */
+/* ===== Terms page ===== */
+.terms {
+  width: min(100%, 860px);
+  margin: 0 auto;
+  padding: 10px 20px 60px;
+  font-family: Arial, "Roboto", sans-serif;
+}
+
+.terms-hero { display: block; width: 100%; max-width: 800px; margin: 20px auto 50px; }
+
+.terms a { color: #1a0dab; }
+
+.terms h1 { font-size: 1.7rem; font-weight: 700; }
+.terms h2 { margin: 28px 0 12px; font-size: 1.3rem; font-weight: 700; }
+
+.meta { margin-top: 10px; font-size: .9rem; }
+
+.terms p { margin-top: 12px; font-size: .95rem; line-height: 1.6; }
+.terms .intro { font-size: 1.05rem; font-weight: 700; }
+
+.terms ul { margin: 12px 0 0 22px; line-height: 1.8; font-size: .95rem; }
+
+.back { margin-top: 30px; }
+/* ===== Footer ===== */
+.footer { background: var(--footer); color: var(--muted); font-size: .9rem; }
+
+.country { padding: 14px 30px; border-bottom: 1px solid var(--line); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 30px;
+  padding: 14px 30px;
+}
+.footer-links nav { display: flex; flex-wrap: wrap; gap: 10px 26px; }
+
+/* ===== Accessibility ===== */
+.skip-link { position: absolute; left: -999px; top: 8px; z-index: 10; padding: 8px 14px; color: #fff; background: var(--text); }
+.skip-link:focus { left: 8px; }
+
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .actions { flex-direction: column; align-items: center; }
+  .footer-links { flex-direction: column; }
+}

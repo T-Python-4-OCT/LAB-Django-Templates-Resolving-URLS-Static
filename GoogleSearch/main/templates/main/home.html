@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Google{% endblock %}
+
+{% block content %}
+<section class="home">
+
+    <h1 class="logo" aria-label="Google">
+        <span class="b" aria-hidden="true">G</span><span class="r" aria-hidden="true">o</span><span class="y" aria-hidden="true">o</span><span class="b" aria-hidden="true">g</span><span class="g" aria-hidden="true">l</span><span class="r" aria-hidden="true">e</span>
+    </h1>
+
+    <!-- Bonus: the form sends the search term to google.com -->
+    <form class="search-form" action="https://www.google.com/search" method="get">
+        <div class="search-box">
+            <span class="material-symbols-outlined" aria-hidden="true">search</span>
+            <input type="search" name="q" aria-label="Search Google" autocomplete="off" autofocus>
+            <button class="icon-btn" type="button" aria-label="Search by voice">
+                <span class="material-symbols-outlined" aria-hidden="true">mic</span>
+            </button>
+        </div>
+
+        <div class="actions">
+            <button class="btn" type="submit">Google Search</button>
+            <button class="btn" type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+        </div>
+    </form>
+
+    <p class="offered">Google offered in: <a href="https://www.google.com/?hl=ar" target="_blank" rel="noopener">العربية</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google Terms of Service{% endblock %}
+
+{% block content %}
+<article class="terms">
+
+    <!-- Put the illustration from the resources folder in main/static/images/ and write its real file name here -->
+    <img class="terms-hero" src="{% static 'images/tos_main_illustration.svg' %}"
+         alt="Illustration of a document, a scale of justice, a shield and a phone">
+
+    <h1>Google Terms of Service</h1>
+    <p class="meta">
+        Effective 5 January 2022 |
+        <a href="https://policies.google.com/terms/archive" target="_blank" rel="noopener">Archived versions</a> |
+        <a href="https://policies.google.com/terms/archive" target="_blank" rel="noopener">Download PDF</a>
+    </p>
+    <p class="meta"><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Country version:</a> Saudi Arabia</p>
+
+    <h2>What's covered in these terms</h2>
+
+    <p class="intro">
+        Replace this bold introduction with the text from the resources folder.
+    </p>
+
+    <p>
+        Replace this paragraph with the text from the resources folder. It explains how these terms
+        define the relationship between you and the service, and it lists the main topics below.
+    </p>
+
+    <ul>
+        <li>Topic heading one</li>
+        <li>Topic heading two</li>
+        <li>Topic heading three</li>
+        <li>Topic heading four</li>
+    </ul>
+
+    <p class="back">
+        <a href="{% url 'main:home_view' %}">Back to Google Search</a>
+    </p>
+</article>
+{% endblock %}
