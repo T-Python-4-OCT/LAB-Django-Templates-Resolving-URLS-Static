@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main_class %}home{% endblock %}
+{% block content %}
+<h1 class="wordmark"><img src="{% static 'brave-logo.svg' %}" alt="Brave Search" width="194" height="60"></h1>
+<form class="search-box" action="https://search.brave.com/search" method="get" role="search">
+    <input type="search" name="q" dir="auto" aria-label="Search the web" placeholder="Search the web privately" required>
+    <button type="submit" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+</form>
+{% endblock %}
