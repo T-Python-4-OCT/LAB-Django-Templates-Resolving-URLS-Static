@@ -1,0 +1,33 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Google{% endblock %}
+
+{% block content %}
+
+<main class="home">
+
+    <img src="{% static 'images/google-logo.png' %}" alt="Google" class="logo">
+
+    <!-- Bonus: the form sends the search to google.com -->
+    <form action="https://www.google.com/search" method="GET" class="search-form">
+
+        <div class="search-box">
+            <span class="material-symbols-outlined search-icon">search</span>
+            <input type="text" name="q" autofocus>
+            <img src="{% static 'images/mircophone.png' %}" alt="Search by voice" class="mic-icon">
+            <img src="{% static 'images/camera.png' %}" alt="Search by image" class="lens-icon">
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Google Search</button>
+            <button type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+        </div>
+
+    </form>
+
+    <p class="offered">Google offered in: <a href="https://www.google.com/?hl=ar">العربية</a></p>
+
+</main>
+
+{% endblock %}
