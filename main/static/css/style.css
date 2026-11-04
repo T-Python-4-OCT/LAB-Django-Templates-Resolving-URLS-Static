@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #202124;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.logo img {
+    width: 272px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.search-wrapper {
+    width: 580px;
+    max-width: 90vw;
+    height: 46px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.search-wrapper:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-icon {
+    color: #9aa0a6;
+    margin-right: 12px;
+}
+
+.search-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-wrapper img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-left: 12px;
+}
+
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.search-buttons button {
+    background: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.search-buttons button:hover {
+    border-color: #dadce0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    width: 100%;
+    padding: 18px 30px;
+}
+
+footer a {
+    color: #5f6368;
+    text-decoration: none;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 1.7;
+}
+
+.terms-container h1 {
+    font-size: 38px;
+}
+
+.terms-container img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 35px auto;
+}
+
+.terms-container h2 {
+    margin-top: 35px;
+}
+
+@media (max-width: 650px) {
+    .search-wrapper {
+        width: 90vw;
+    }
+
+    .home-container {
+        padding-top: 120px;
+    }
+
+    .terms-container {
+        margin: 25px auto;
+    }
+}

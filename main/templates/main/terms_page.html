@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Google Terms of Service{% endblock %}
+
+{% block content %}
+
+<div class="terms-container">
+
+    <h1>Google Terms of Service</h1>
+
+    <p>When you use our services, you're trusting us with your information.</p>
+
+    <img src="{% static 'images/tos_main_illustration.svg' %}"
+         alt="Terms of Service illustration">
+
+    <h2>Using Google Services</h2>
+    <p>You must follow the terms and policies that apply to our services.</p>
+
+    <h2>Your Content</h2>
+    <p>Our services allow you to create, upload, store, send, receive, and share your content.</p>
+
+</div>
+
+<a href="{% url 'home' %}">Back to Google Search</a>
+
+{% endblock %}
