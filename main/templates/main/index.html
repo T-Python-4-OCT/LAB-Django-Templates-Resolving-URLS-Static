@@ -5,30 +5,86 @@
 
 {% block content %}
 
-<div class="home-container">
+<main class="home-container">
 
+    <!-- Google Logo -->
     <div class="logo">
         <img src="{% static 'images/google-logo.png' %}" alt="Google">
     </div>
 
+    <!-- Search Form -->
     <form action="https://www.google.com/search" method="get">
-        <div class="search-wrapper">
-            <span class="search-icon">⌕</span>
-            <input type="text" name="q" class="search-box">
-            <img src="{% static 'images/mircophone.png' %}" alt="Microphone">
-            <img src="{% static 'images/camera.png' %}" alt="Camera">
+
+        <div class="search-area">
+
+            <div class="search-wrapper">
+
+                <span class="search-icon material-symbols-outlined">
+                    search
+                </span>
+
+                <input
+                    type="text"
+                    name="q"
+                    class="search-box"
+                    aria-label="Search"
+                >
+
+                <!-- Microphone Icon -->
+                <span class="icon-button">
+                    <img src="{% static 'images/mircophone.png' %}"
+                         alt="Microphone">
+                </span>
+
+                <!-- Camera Icon -->
+                <span class="icon-button">
+                    <img src="{% static 'images/camera.png' %}"
+                         alt="Google Lens">
+                </span>
+
+            </div>
+
         </div>
 
+        <!-- Search Buttons -->
         <div class="search-buttons">
+
             <button type="submit">Google Search</button>
-            <button type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+
+            <button type="submit" name="btnI" value="1">
+                I'm Feeling Lucky
+            </button>
+
         </div>
+
     </form>
 
-</div>
+</main>
 
-<footer>
-    <a href="{% url 'terms' %}">Terms of Service</a>
+<!-- Footer -->
+<footer class="page-footer">
+
+    <div class="country-row">
+        Saudi Arabia
+    </div>
+
+    <div class="footer-links">
+
+        <div class="footer-left">
+            <span>About</span>
+            <span>Advertising</span>
+            <span>Business</span>
+            <span>How Search works</span>
+        </div>
+
+        <div class="footer-right">
+            <span>Privacy</span>
+            <a href="{% url 'terms' %}">Terms</a>
+            <span>Settings</span>
+        </div>
+
+    </div>
+
 </footer>
 
 {% endblock %}
